@@ -22,7 +22,13 @@ const typeDefs = gql`
     minimum required to create a dog are the three mandatory fields. (id created dynamically by resolver)
     Must return the newly created object that matches type Dog.
     """
-    createDog(name: String!, breed: String!, dateOfBirth: String!): Dog!
+    createDog(
+      name: String!
+      breed: String!
+      dateOfBirth: String!
+      weight: Int
+      imageUrl: String
+    ): Dog!
     renameDog(id: ID!, name: String!): Dog!
   }
   "A dog is a very good boy"
