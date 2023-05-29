@@ -18,7 +18,7 @@ async function startApolloServer() {
   Server is running at ${url}
   `);
 
-  return server;
+  return server; /// return the server in order to pass it to the next then block in mongoose connect
 }
 
 mongoose
