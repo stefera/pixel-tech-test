@@ -29,6 +29,6 @@ mongoose
     return startApolloServer();
   })
   .then((server) => {
-    app.use("/4000", expressMiddleware(server));
+    app.use(expressMiddleware(server));
   })
   .catch((err) => console.log(err));

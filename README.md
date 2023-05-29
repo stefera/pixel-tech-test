@@ -38,8 +38,8 @@ submission by Samuel Tefera completed on 29th May 2023.
 
 ### Set up instructions:
 - $ git clone https://github.com/stefera/pixel-tech-test.git
-- run $ cd pixel-tech-test
-npm i && npm start
+- create .env file in top level directory (see email for details)
+- run $ npm i && npm start
 - go to http://localhost:4000/ to open Apollo Explorer
 
 ### Notes on running the application:
