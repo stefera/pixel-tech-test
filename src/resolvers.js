@@ -1,5 +1,7 @@
+/// dummy data for dogs
 const dogs = [
   {
+    id: 1,
     name: "Max",
     dateOfBirth: "15-04-2019",
     breed: "Labrador Retriever",
@@ -7,6 +9,7 @@ const dogs = [
     imageUrl: "https://example.com/max.jpg",
   },
   {
+    id: 2,
     name: "Bella",
     dateOfBirth: "02-11-2020",
     breed: "Poodle",
@@ -14,6 +17,7 @@ const dogs = [
     imageUrl: "https://example.com/bella.jpg",
   },
   {
+    id: 3,
     name: "Charlie",
     dateOfBirth: "10-09-2016",
     breed: "German Shepherd",
@@ -21,6 +25,7 @@ const dogs = [
     imageUrl: "https://example.com/charlie.jpg",
   },
   {
+    id: 4,
     name: "Lucy",
     dateOfBirth: "21-07-2017",
     breed: "Beagle",
@@ -28,6 +33,7 @@ const dogs = [
     imageUrl: "https://example.com/lucy.jpg",
   },
   {
+    id: 5,
     name: "Cooper",
     dateOfBirth: "08-03-2022",
     breed: "Golden Retriever",
@@ -35,6 +41,7 @@ const dogs = [
     imageUrl: "https://example.com/cooper.jpg",
   },
   {
+    id: 6,
     name: "Luna",
     dateOfBirth: "05-06-2021",
     breed: "Siberian Husky",
@@ -42,6 +49,7 @@ const dogs = [
     imageUrl: "https://example.com/luna.jpg",
   },
   {
+    id: 7,
     name: "Rocky",
     dateOfBirth: "17-12-2015",
     breed: "Boxer",
@@ -49,6 +57,7 @@ const dogs = [
     imageUrl: "https://example.com/rocky.jpg",
   },
   {
+    id: 8,
     name: "Daisy",
     dateOfBirth: "29-09-2018",
     breed: "Bulldog",
@@ -56,6 +65,7 @@ const dogs = [
     imageUrl: "https://example.com/daisy.jpg",
   },
   {
+    id: 9,
     name: "Maximus",
     dateOfBirth: "12-01-2017",
     breed: "Rottweiler",
@@ -63,6 +73,7 @@ const dogs = [
     imageUrl: "https://example.com/maximus.jpg",
   },
   {
+    id: 10,
     name: "Sadie",
     dateOfBirth: "06-08-2020",
     breed: "Shih Tzu",
@@ -78,10 +89,10 @@ const resolvers = {
     dogs: (_, __, { dataSources }) => {
       return dogs;
     },
-    dogbyId: (_, { id }, { dataSources }) => {
+    dogById: (_, { id }, { dataSources }) => {
       return dogs.filter((dog) => dog.id === id)[0];
     },
-    dogbyBreed: (_, { breed }, { dataSources }) => {
+    dogByBreed: (_, { breed }, { dataSources }) => {
       return dogs.filter((dog) => dog.breed === breed);
     },
   },

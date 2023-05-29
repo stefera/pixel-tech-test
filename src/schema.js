@@ -4,9 +4,9 @@ const typeDefs = gql`
   type Query {
     "Get an array of dogs for the client (if built)"
     dogs: [Dog!]!
-    "Get one specific dog by its ID. Must receive a id parameter"
+    "Get one specific dog by its ID. Must receive a id arg"
     dogById(id: Int!): Dog!
-    "Get an array of dogs by their breed name. Must receive a breed name parameter"
+    "Get an array of dogs by their breed name. Must receive a breed name arg"
     dogByBreed(breed: String!): [Dog!]
   }
   type Mutation {
@@ -19,7 +19,7 @@ const typeDefs = gql`
     breed: String!
     "custom field could be created for date here, but for now DD-MM-YYYY string format used"
     dateOfBirth: String!
-    imageURL: String
+    imageUrl: String
     weight: Int
   }
 `;
