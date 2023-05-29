@@ -9,7 +9,7 @@ const typeDefs = gql`
     Get a single dog by its ID. Must receive an integer as an id arg.
     Must return one object that matches type Dog.
     """
-    dogById(id: Int!): Dog!
+    dogById(id: String!): Dog!
 
     """
     Get an array of dogs by their breed name. Must receive a string as a breed name arg.
@@ -20,13 +20,14 @@ const typeDefs = gql`
   type Mutation {
     """
     minimum required to create a dog are the three mandatory fields. (id created dynamically by resolver)
-    must return a new array of dogs with the object added onto the end.
+    Must return the newly created object that matches type Dog.
     """
-    createDog(name: String!, breed: String!, dateOfBirth: String!): [Dog!]!
+    createDog(name: String!, breed: String!, dateOfBirth: String!): Dog!
+    renameDog(id: ID!, name: String!): Dog!
   }
   "A dog is a very good boy"
   type Dog {
-    id: ID!
+    _id: ID!
     name: String!
     breed: String!
     "custom field could be created for date here, but for now DD-MM-YYYY string format used"

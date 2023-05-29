@@ -12,12 +12,12 @@ const dogSchema = new Schema({
     required: true,
   },
   dateOfBirth: {
-    type: Number,
+    type: String, //change to Date type later
     required: true,
   },
   imageUrl: {
     type: String,
-    required: true,
+    required: false,
   },
   weight: {
     type: Number,
