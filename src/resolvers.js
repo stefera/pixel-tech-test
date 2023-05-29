@@ -96,6 +96,18 @@ const resolvers = {
       return dogs.filter((dog) => dog.breed === breed);
     },
   },
+  Mutation: {
+    createDog: (_, { name, breed, dateOfBirth }, { dataSources }) => {
+      const newDog = {
+        name,
+        breed,
+        dateOfBirth,
+        id: 20,
+      };
+      dogs.push(newDog);
+      return dogs;
+    },
+  },
 };
 
 module.exports = resolvers;
